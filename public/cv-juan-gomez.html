@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Juan Pablo Gómez</title>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --accent-color: #3b82f6;
+            --text-color: #334155;
+            --light-bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #cbd5e1;
+            padding: 2rem;
+            margin: 0;
+        }
+
+        .cv-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 3.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-top: 6px solid var(--accent-color);
+            border-radius: 4px;
+        }
+
+        /* Header */
+        .cv-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .cv-header h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin: 0 0 0.5rem 0;
+            line-height: 1;
+        }
+
+        .cv-header h2 {
+            color: var(--accent-color);
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 0.9rem;
+        }
+
+        .contact-info p {
+            margin: 0.25rem 0;
+        }
+
+        .contact-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        /* Sections */
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Experience */
+        .job {
+            margin-bottom: 1.5rem;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .job-date {
+            color: #64748b;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .job-company {
+            font-style: italic;
+            color: #475569;
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            margin-top: 0.5rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.35rem;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background: var(--light-bg);
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        .skill-category h4 {
+            margin: 0 0 0.5rem 0;
+            color: var(--primary-color);
+        }
+
+        .print-btn {
+            display: block;
+            width: fit-content;
+            margin: 2rem auto;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+            transition: all 0.2s;
+        }
+
+        .print-btn:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+            }
+
+            .print-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="window.print()" class="print-btn">Descargar PDF / Imprimir CV</button>
+
+    <div class="cv-container">
+        <!-- Header -->
+        <header class="cv-header">
+            <div>
+                <h1>Juan Pablo Gómez</h1>
+                <h2>Backend Developer | NestJS · Node.js</h2>
+            </div>
+            <div class="contact-info">
+                <p>📍 Medellín, Antioquia, Colombia</p>
+                <p>📞 +57 302 424 2009</p>
+                <p>📧 <a href="mailto:juanpablogomezvelez@gmail.com">juanpablogomezvelez@gmail.com</a></p>
+                <p>🔗 <a href="https://github.com/JuanGomez998" target="_blank">github.com/JuanGomez998</a></p>
+            </div>
+        </header>
+
+        <!-- Objetivo -->
+        <section>
+            <h3 class="section-title">Objetivo y Perfil Profesional</h3>
+            <p>Backend Developer con experiencia en NestJS, Node.js y bases de datos SQL, orientado al desarrollo de
+                microservicios, buenas prácticas y calidad de software. Busco aportar valor construyendo APIs escalables
+                y mantenibles, aplicando principios de arquitectura limpia y pruebas automatizadas. Mi objetivo es
+                crecer en un equipo donde pueda aprender continuamente, asumir nuevos retos técnicos y contribuir con
+                soluciones robustas y eficientes.</p>
+            <p>Me caracterizo por un pensamiento analítico, responsabilidad, adaptabilidad y comunicación clara.
+                Disfruto trabajar en equipo, resolver problemas técnicos complejos y crear sistemas escalables que
+                generen valor real.</p>
+        </section>
+
+        <!-- Experiencia Laboral -->
+        <section>
+            <h3 class="section-title">Experiencia Laboral</h3>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Backend Developer</span>
+                    <span class="job-date">2024 – Actualidad</span>
+                </div>
+                <div class="job-company">Encafeinados</div>
+                <ul>
+                    <li>Desarrollo de microservicios backend con NestJS siguiendo Clean Architecture y Onion
+                        Architecture.</li>
+                    <li>Modelado de entidades, relaciones y consultas avanzadas con TypeORM y PostgreSQL.</li>
+                    <li>Creación y documentación de APIs RESTful usando Swagger.</li>
+                    <li>Implementación de pruebas unitarias y E2E con Jest y Supertest.</li>
+                    <li>Colaboración en equipos ágiles (Scrum) y gestión de versiones con Git/GitHub.</li>
+                </ul>
+                <strong>Logros Críticos:</strong>
+                <ul>
+                    <li>Implementación de un módulo con +80% de cobertura en pruebas.</li>
+                    <li>Optimización de consultas SQL reduciendo tiempos de respuesta en un 20%.</li>
+                    <li>Estandarización de principios SOLID dentro del equipo.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Experiencia Complementaria Previa</span>
+                </div>
+                <ul>
+                    <li><strong>Jefe de Cocina</strong> – Restaurante Herbario (2023–2024)</li>
+                    <li><strong>Jefe de Producción</strong> – Sereno Producciones (2021–2022)</li>
+                    <li><strong>Gestor Logístico y Marketing</strong> – Emprendimiento Propio (2019–2021)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Educación -->
+        <section>
+            <h3 class="section-title">Educación</h3>
+            <ul>
+                <li><strong>Técnico en Análisis y Desarrollo de Software</strong> – SENA (2025)</li>
+                <li><strong>Análisis Exploratorio de Datos con Python</strong> – SENA (2024)</li>
+                <li><strong>Tecnólogo en Administración y Gastronomía</strong> – Univ. Colegio Mayor de Antioquia (2022)
+                </li>
+            </ul>
+        </section>
+
+        <!-- Habilidades -->
+        <section>
+            <h3 class="section-title">Habilidades Técnicas y Competencias</h3>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>⚙️ Backend & Testing</h4>
+                    <p>Node.js, NestJS, .NET C#<br>
+                        PostgreSQL, SQL Server, MySQL<br>
+                        JWT Auth, Clean/Onion Architecture<br>
+                        Jest, Supertest (Unit & E2E)<br>
+                        Swagger API Docs</p>
+                </div>
+
+                <div class="skill-category">
+                    <h4>🖥️ Frontend</h4>
+                    <p>HTML5, CSS3, Tailwind CSS<br>
+                        TypeScript, JavaScript<br>
+                        React (Fundamentos), Angular</p>
+                </div>
+
+                <div class="skill-category">
+                    <h4>🛠 DevOps & Otros</h4>
+                    <p>Docker, CI/CD GitHub Actions<br>
+                        GitFlow, Postman, Scrum<br>
+                        Python (Pandas, Matplotlib)</p>
+                </div>
+
+                <div class="skill-category">
+                    <h4>🤝 Competencias Blandas</h4>
+                    <p>Trabajo en equipo, Liderazgo<br>
+                        Resolución de problemas complejos<br>
+                        Inglés: A2</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>
